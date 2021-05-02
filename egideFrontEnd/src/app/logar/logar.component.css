@@ -1,0 +1,29 @@
+body{
+    background: url(../../assets/img/img-fundo.png);
+    min-height: 100vh;
+    opacity: 0.9;
+    
+}
+.container{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.size {
+ background-color: rgba(249, 250, 251, 0.808);;
+ border-radius: 10px;
+ width: 552px;
+ display: table;
+  
+    
+}
+.sizelogo{
+    width: 180px;
+    height: 100px;
+}
+.pad-but{
+    margin: 20px;
+}
