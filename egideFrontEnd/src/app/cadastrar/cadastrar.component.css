@@ -1,29 +1,12 @@
-body{
-    background: url(../../assets/img/bg-fundo2.png);
-    min-height: 100vh;
-    opacity: 0.9;
-    
-}
-.container{
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
+
+.img-bg{
+    background-image: url('../../assets/img/unknown.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 500px;
 }
 
-.size {
- background-color: rgba(249, 250, 251, 0.808);;
- border-radius: 10px;
- width: 552px;
- display: table;
-  
-    
-}
-.sizelogo{
-    width: 180px;
-    height: 100px;
-}
-.pad-but{
-    margin: 20px;
+.estilo-caixa{
+    box-shadow: 0 1px 4px rgb(2, 2, 2);
+    background-color: rgba(249, 250, 251, 0.925);
 }
