@@ -1,12 +1,23 @@
-
-.img-bg{
-    background-image: url('../../assets/img/unknown.png');
+.Parametro{
+    
+    background-image: url('../../assets/img/qualque.svg');
+    background-size:cover;
     background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 500px;
+    min-height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.estilo-caixa{
-    box-shadow: 0 1px 4px rgb(2, 2, 2);
+.size {
+    box-shadow: 0 1px 4px rgb(2, 2, 2); 
     background-color: rgba(249, 250, 251, 0.925);
-}
+    border-radius: 8px;
+    width: 680px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    }
