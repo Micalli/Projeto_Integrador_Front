@@ -2,7 +2,7 @@
 
 .fundo{
     background-color: #e782d1;
-    height: 1300px;
+    height: 2000px;
     overflow:hidden
 }
 
@@ -24,9 +24,96 @@
 .botao{
     
     border: 1px solid rgb(104, 31, 93);
+   width: 90px;
+   white-space: nowrap;
 }
 
 .botao:hover{
     background-color: rgb(235, 187, 235);
     transition: 1.0s;
+}
+
+
+
+.fSizeMenu{
+    font-size: 20px;
+    color: black;
+}
+.fSizeMenu:hover{
+    text-decoration: none;
+    
+    color: rgb(134, 68, 123)  ;
+}
+.response{
+    position: relative;
+    left: 560px;
+}
+@media only screen and (max-width:1638px){
+    .response{
+        position: relative;
+        left: 100px;
+    }
+}
+@media only screen and (max-width:700px){
+    .response{
+        position: relative;
+        left: 10px;
+    }
+}
+@media only screen and (max-width:539px){
+    .response{
+        position: relative;
+        left: 5px;
+    }
+}
+.szButton{
+    height: 42px;
+}
+.posLogo{
+    position: relative;
+    right: 675px;
+}
+
+@media only screen and (max-width:1649px){
+    .posLogo{
+        position: relative;
+        right: 545px;
+    }
+}
+@media only screen and (max-width:1593px){
+    .posLogo{
+        position: relative;
+        right: 300px;
+    }
+}
+
+@media only screen and (max-width:1117px){
+    .posLogo{
+        position: relative;
+        right: 150px;
+    }
+}
+@media only screen and (max-width:800px){
+    .posLogo{
+        position: relative;
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width:560px){
+    .imgResponse{
+        height: 35px;
+        width: 35px;
+    }
+    .posLogo{
+        position: relative;
+        right: 5px;
+    }
+}
+
+@media only screen and (max-width:560px){
+    .fSizeMenu{
+        font-size: 16px;
+    }
+    
 }
