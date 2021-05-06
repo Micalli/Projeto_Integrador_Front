@@ -1,29 +1,40 @@
 body{
-    background: url(../../assets/img/img-fundo.png);
+    
+    background: url(../../assets/img/telaLoginAngelinha.svg);
+    background-size:cover;
+    background-repeat: no-repeat;
     min-height: 100vh;
     opacity: 0.9;
-    
-}
-.container{
     display: flex;
-    flex-flow: row;
-    justify-content: center;
     align-items: center;
-    text-align: justify;
+    justify-content: center;
+    
 }
 
 .size {
- background-color: rgba(249, 250, 251, 0.808);;
- border-radius: 10px;
- width: 552px;
- display: table;
-  
+ box-shadow: 0 1px 4px rgb(2, 2, 2); 
+ background-color: rgba(249, 250, 251, 0.925);
+ border-radius: 8px;
+ width: 510px;
+ height: 540px;
+ display: flex;
+ align-items: center;
+ overflow: hidden;
+ }
+
+ .sizelogo{
     
-}
-.sizelogo{
     width: 180px;
     height: 100px;
 }
+
 .pad-but{
-    margin: 20px;
+    margin: 7px;
 }
+
+.container div img {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px;
+    grid-gap: 10px;
+ }
