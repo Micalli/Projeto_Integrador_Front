@@ -12,19 +12,21 @@
 
     <div class="col-md-12">
       <div class="form-group">
-        <label for="nome">Nome</label>
-<input class="form-control d-flex" type="text" name="nome" id="nome" placeholder="Digite seu nome">
+        <label for="usuario">Usuario</label>
+<input [(ngModel)]='userLogin.usuario' class="form-control d-flex" type="text" name="usuario" id="usuario" placeholder="Digite seu Usuario">
       </div>
       <div class="form-group">
         <label for="senha">Senha</label>
-        <input class="form-control d-flex" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        <input [(ngModel)]='userLogin.senha' class="form-control d-flex" type="password" name="senha" id="senha" placeholder="Digite sua senha">
 <a class="m-0" href="#">Esqueceu sua senha?</a>
 
-      <div class="d-flex justify-content-center m-3 pad-but ">
-<button type="submit" class="btn btn-primary pad-but ">
+      
+<div class ="d-flex justify-content-center m-3 pad-but ">
+<button type="submit" class="btn btn-primary pad-but" (click)='entrar()'>
           Entrar
         </button>
-<button type="submit" class="btn btn-danger pad-but" routerLink='/inicio' >
+
+        <button type="submit" class="btn btn-danger pad-but" routerLink='/inicio' >
           Cancelar
         </button>
       </div>
