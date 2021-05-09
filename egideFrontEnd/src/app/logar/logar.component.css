@@ -1,12 +1,12 @@
-.body{
-    background: url(../../assets/img/telaLoginAngelinha.svg);
+    .body {
+        background: url(../../assets/img/telaLoginAngelinha.svg);
         background-size:cover;
         background-repeat: no-repeat;
         min-height: 100vh;
         opacity: 0.9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         align-items:center;
     }
     
@@ -19,15 +19,15 @@
      display: flex;
      align-items: center;
      overflow: hidden;
-     }
+    }
     
-     .sizelogo{
-    width: 180px;
-        height: 100px;
+    .sizelogo{
+      width: 180px;
+      height: 100px;
     }
     
     .pad-but{
-    margin: 7px;
+      margin: 7px;
     }
     
     .container div img {
@@ -35,4 +35,40 @@
         grid-template-columns: 100%;
         grid-template-rows: 100px;
         grid-gap: 10px;
-     }
+    }
+
+     
+    /* Estilos dos botões de logar*/
+    .botao{
+      border: 1px solid rgb(104, 31, 93);
+      width: 112px;
+      white-space: nowrap;
+      border-radius: 80px;
+    }
+ 
+    .botao:hover{
+     background-color: #ad7b64;
+     color: white;
+     transition: 0.4s;
+     
+    }
+    /* Fim dos estilos dos botões de logar*/
+ 
+  
+    /* Estilos dos botões de cancelar*/
+    .botaoCancelar{
+     border: 1px solid rgb(104, 31, 93);
+     width: 112px;
+     white-space: nowrap;
+     border-radius: 80px;
+    }
+  
+    .botaoCancelar:hover{
+      background-color: #dd2b2b;
+      color: white;
+      transition: 0.4s;
+      border-color: rgb(0, 0, 0);
+    }
+    /* Fim dos estilos dos botões de cancelar*/
+
+
