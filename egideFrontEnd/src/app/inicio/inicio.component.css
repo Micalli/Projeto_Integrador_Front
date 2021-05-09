@@ -1,31 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
 
 .fundo{
-    background-color: #e782d1;
-    height: 1000px;
+    background-color: #eea4de;
+    
+    height: 100px;
+    overflow:hidden;
+
+}
+.fundo2{
+    background-color: #f2d8e4;
+    height: 5000px;
+    overflow:hidden
 }
 
 .imagem{
     width: 600px;
     height: 600px;
     position:relative;
-    top: 100px;
+    top: 380px;
 }
 
 .fonte{
     font-family: 'Source Code Pro';
+    color: rgb(104, 31, 93);
 }
 
+
 .textColor{
-    color:rgb(104, 31, 93) ;
+    color:black ;
 }
 
 .botao{
     
     border: 1px solid rgb(104, 31, 93);
+   width: 135px;
+   white-space: nowrap;
+   border-radius: 80px;
 }
 
 .botao:hover{
-    background-color: rgb(235, 187, 235);
+    background-color: #ad7b64;
+    color: white;
     transition: 1.0s;
+    
+}
+
+
+
+.fSizeMenu{
+    font-size: 28px;
+    
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: bold;
+}
+
+.response{
+    position: relative;
+    left: 560px;
+}
+@media only screen and (max-width:1638px){
+    .response{
+        position: relative;
+        left: 100px;
+    }
+}
+@media only screen and (max-width:700px){
+    .response{
+        position: relative;
+        left: 10px;
+    }
+}
+@media only screen and (max-width:539px){
+    .response{
+        position: relative;
+        left: 5px;
+    }
+}
+.szButton{
+    height: 42px;
+}
+.posLogo{
+    position: relative;
+    right: 675px;
+}
+
+@media only screen and (max-width:1649px){
+    .posLogo{
+        position: relative;
+        right: 545px;
+    }
+}
+@media only screen and (max-width:1593px){
+    .posLogo{
+        position: relative;
+        right: 300px;
+    }
+}
+
+@media only screen and (max-width:1117px){
+    .posLogo{
+        position: relative;
+        right: 150px;
+    }
+}
+@media only screen and (max-width:800px){
+    .posLogo{
+        position: relative;
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width:560px){
+    .imgResponse{
+        height: 35px;
+        width: 35px;
+    }
+    .posLogo{
+        position: relative;
+        right: 5px;
+    }
+}
+
+@media only screen and (max-width:560px){
+    .fSizeMenu{
+        font-size: 16px;
+    }
+    
 }
