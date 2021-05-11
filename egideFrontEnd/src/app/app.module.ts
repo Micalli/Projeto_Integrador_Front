@@ -8,6 +8,9 @@ import { LogarComponent } from './logar/logar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LinhaTempoComponent } from './linha-tempo/linha-tempo.component';
+import { TemaComponent } from './tema/tema.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './detele/tema-delete/tema-delete.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { LinhaTempoComponent } from './linha-tempo/linha-tempo.component';
     LogarComponent,
     CadastrarComponent,
     InicioComponent,
-    LinhaTempoComponent
+    LinhaTempoComponent,
+    TemaComponent,
+    TemaEditComponent,
+    TemaDeleteComponent
   ],
   imports: [
     BrowserModule,
