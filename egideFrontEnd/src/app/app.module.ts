@@ -9,13 +9,15 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LinhaTempoComponent } from './linha-tempo/linha-tempo.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LogarComponent,
     CadastrarComponent,
     InicioComponent,
-    LinhaTempoComponent
+    LinhaTempoComponent,
+    
   ],
   imports: [
     BrowserModule,

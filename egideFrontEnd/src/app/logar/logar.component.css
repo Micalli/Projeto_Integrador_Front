@@ -43,7 +43,7 @@
       border: 1px solid rgb(104, 31, 93);
       width: 112px;
       white-space: nowrap;
-      border-radius: 80px;
+      border-radius: 8px;
     }
  
     .botao:hover{
@@ -60,7 +60,7 @@
      border: 1px solid rgb(104, 31, 93);
      width: 112px;
      white-space: nowrap;
-     border-radius: 80px;
+     border-radius: 9px;
     }
   
     .botaoCancelar:hover{
