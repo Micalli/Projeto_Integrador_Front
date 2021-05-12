@@ -14,3 +14,13 @@ a{
 .card-body{
     width: 10px;
 }
+
+.corFundoJ{
+        
+    opacity:10;
+      
+      background: rgba(204, 69, 216, 0.452); /*cor que torna a barra transparente*/
+      overflow: hidden;
+      backdrop-filter: blur(10px); /* elemento que deixa a transparência mais ofuscada*/
+     
+   }
