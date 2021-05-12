@@ -1,0 +1,21 @@
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa {
+    font-size: 35pt;
+    color: brown;
+    padding: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.fa:hover {
+    color: chartreuse;
+}
