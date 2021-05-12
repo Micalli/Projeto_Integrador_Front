@@ -1,0 +1,16 @@
+.fs-16
+{
+    font-size: 16pt;
+}
+
+a{
+    cursor: pointer;
+}
+
+.shad{
+    box-shadow: 0 1px 4px rgb(2, 2, 2);
+}
+
+.card-body{
+    width: 10px;
+}
