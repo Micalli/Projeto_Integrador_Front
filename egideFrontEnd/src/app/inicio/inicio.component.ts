@@ -12,9 +12,9 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-    this.scroll()
+    //this.scroll()
     setInterval(()=> {
-      this.scroll()
+      //this.scroll()
     },100)
    
    
@@ -30,7 +30,7 @@ export class InicioComponent implements OnInit {
         }
     }, 3);
 }
- scroll(){
+ /*scroll(){
   
   let x = <HTMLElement>document.body.querySelector(".active")
   window.addEventListener ("scroll", ()=>{
@@ -41,7 +41,7 @@ export class InicioComponent implements OnInit {
     }
   })
 
-}
+}*/
 
 
 
