@@ -17,6 +17,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

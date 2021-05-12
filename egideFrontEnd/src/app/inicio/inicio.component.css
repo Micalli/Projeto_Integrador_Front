@@ -4,22 +4,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
 
+
+html{
+    scroll-behavior: auto;
+}
 .mt-190{
     margin-top: 190px;
 }
 .mt-150{
-    margin-top: 150px;
+    margin-top: 350px;
 }
 .m-txt{
     margin-left:150px ;
     margin-right: 150px;
 }
 .fundo{
-    background-color: #eea4de;
+    background-color: #db9ff3;
     
     height: 100px;
     overflow:hidden;
 
+}
+.sz-txt{
+    font-size: 23px;
 }
 .fundo2{
     background-color: #f2d8e4;
@@ -49,10 +56,24 @@
     border: 1px solid rgb(104, 31, 93);
    width: 135px;
    white-space: nowrap;
-   border-radius: 80px;
+   border-radius: 9px;
 }
 
 .botao:hover{
+    background-color: #ad7b64;
+    color: white;
+    transition: 1.0s;
+    
+}
+.botao2{
+    
+    border: 1px solid rgb(104, 31, 93);
+   width: 145px;
+   height: 41px;
+   white-space: nowrap;
+   border-radius: 9px;
+}
+.botao2:hover{
     background-color: #ad7b64;
     color: white;
     transition: 1.0s;
@@ -67,6 +88,13 @@
     font-family: 'Montserrat Alternates', sans-serif;
     font-family: 'Shippori Mincho', serif;
     font-weight: bold;
+}
+.fonte2{
+    font-size: 23px;
+    font-weight: 700;
+    font-family: 'Shippori Mincho', serif;
+    text-decoration: none;
+
 }
 
 .response{
@@ -94,9 +122,7 @@
     box-shadow:0 0px 20px rgba(0, 0, 0, 0.5) ;
     
 }
-.foto-bruno{
-    width: ;
-}
+
 .front{
     background-color: rgb(190, 118, 179);
     transform: rotateY(180deg);
@@ -108,7 +134,17 @@
 }
 .img-front{
     width: 100%;
-    height: 400px;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img-bruno{
+
+    width: 100%;
+    height: 150%;
     z-index: 1;
     position: absolute;
     backface-visibility: hidden;
@@ -131,72 +167,92 @@
 .mt-10{
     margin-top: 200px;
 }
-@media only screen and (max-width:1638px){
-    .response{
-        position: relative;
-        left: 100px;
-    }
+.to-top-arrow
+{position:fixed;
+    right:0;
+    bottom: 0;
+    opacity: 0.6;
+    left:50%;
+    transition: 0.5s;
 }
-@media only screen and (max-width:700px){
-    .response{
-        position: relative;
-        left: 10px;
-    }
+.to-top-arrow.active{
+    pointer-events: auto;
+  opacity:0.6;
 }
-@media only screen and (max-width:539px){
-    .response{
-        position: relative;
-        left: 5px;
-    }
-}
-.szButton{
-    height: 42px;
-}
-.posLogo{
-    position: relative;
-    right: 675px;
+.to-top-arrow.active:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: lawngreen;
 }
 
-@media only screen and (max-width:1649px){
-    .posLogo{
-        position: relative;
-        right: 545px;
+@media (max-width:1200px) {
+    .m-txt{
+        margin-left:0 ;
+        margin-right: 0;
     }
-}
-@media only screen and (max-width:1593px){
-    .posLogo{
-        position: relative;
-        right: 300px;
-    }
-}
-
-@media only screen and (max-width:1117px){
-    .posLogo{
-        position: relative;
-        right: 150px;
-    }
-}
-@media only screen and (max-width:800px){
-    .posLogo{
-        position: relative;
-        right: 20px;
-    }
-}
-
-@media only screen and (max-width:560px){
-    .imgResponse{
-        height: 35px;
-        width: 35px;
-    }
-    .posLogo{
-        position: relative;
-        right: 5px;
-    }
-}
-
-@media only screen and (max-width:560px){
-    .fSizeMenu{
-        font-size: 16px;
+    .img2-resp{
+        width: 320px;
+        height: 320px; ;
+    
     }
     
 }
+@media (max-width:767px){
+    .responseabt{
+        margin-top: 350px;
+    }
+    .fundo2{
+        height: 8000px;
+    }
+    .botao2{
+
+        width: 100%;
+    }
+}
+@media (max-width:580px){
+.responsebt{
+    
+    margin-top: 3px;
+    white-space: nowrap;
+
+}
+.botao{
+    font-size: 13px;
+    width: 120px;
+    height: 25%;
+}
+
+.fundo{
+    height: 190px;
+}
+.img1-resp{
+    width: 320px;
+    height: 320px; ;
+
+}
+
+
+
+
+}
+
+@media (max-width:360px){
+    .responsebt{
+        width: 100px;
+        height: 150px;
+        margin-top: 3px;
+        white-space: nowrap;
+    
+    }
+    .botao{
+        font-size: 13px;
+        
+        width: 100%;
+        height: 25%;
+        margin-top: 10px;
+    }
+    .fundo{
+        height: 190px;
+    }
+   
+    }

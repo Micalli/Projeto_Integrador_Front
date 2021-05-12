@@ -20,3 +20,31 @@ border-radius: 8px;
     align-items: center;
     overflow: hidden;
     }
+    .botaoCancelar{
+        border: 1px solid rgb(104, 31, 93);
+        width: 112px;
+        white-space: nowrap;
+        border-radius: 9px;
+       }
+     
+       .botaoCancelar:hover{
+         background-color: #dd2b2b;
+         color: white;
+         transition: 0.4s;
+         border-color: rgb(0, 0, 0);
+       }
+       .pad-but{
+        margin: 7px;
+      }
+      .botao{
+        border: 1px solid rgb(104, 31, 93);
+        width: 112px;
+        white-space: nowrap;
+        border-radius: 8px;
+      }
+   
+      .botao:hover{
+       background-color: #ad7b64;
+       color: white;
+       transition: 0.4s;
+      }
