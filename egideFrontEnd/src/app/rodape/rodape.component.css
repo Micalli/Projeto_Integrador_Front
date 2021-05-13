@@ -11,11 +11,11 @@ ul.social-network li {
 
 .fa {
     font-size: 35pt;
-    color: brown;
+    color: rgb(14, 13, 13);
     padding: 10px;
     transition: all .4s ease-in-out;
 }
 
 .fa:hover {
-    color: chartreuse;
+    color: rgb(206, 141, 223);
 }

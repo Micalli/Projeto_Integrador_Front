@@ -8,6 +8,6 @@ public evento:string
 public comunidade: string
 public date: Date
 public usuarioPublicador:Usuario
-public Tema:Tema
+public tema:Tema
 
 }

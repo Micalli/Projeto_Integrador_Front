@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
@@ -73,10 +74,16 @@ publicar(){
 
   this.usuario.id = this.idUser
   this.postagem.usuarioPublicador = this.usuario
-
+  Swal.fire({
+    icon: 'success',
+    title: '😄',
+    text: 'Postagem publicada',
+    showConfirmButton: false,
+    timer: 2000
+  })
   this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
     this.postagem = resp
-    alert('Postagem realizada com sucesso!')
+    
     this.postagem = new Postagem()
     this.getAllPostagens()
   })
