@@ -24,3 +24,7 @@ a{
       backdrop-filter: blur(10px); /* elemento que deixa a transparência mais ofuscada*/
      
    }
+
+   .imagem{
+       margin-right: 136px;
+   }
