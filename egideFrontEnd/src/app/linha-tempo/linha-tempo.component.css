@@ -1,0 +1,39 @@
+.card{
+    width: 1000px;
+}
+
+.botao{
+    border: 1px solid rgb(104, 31, 93);
+    width: 170px;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+
+  .botao:hover{
+   background-color: #ad7b64;
+   color: white;
+   transition: 0.3s;
+   
+  }
+
+  .botaoV{
+    border: 1px solid rgb(104, 31, 93);
+    width: 170px;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+
+  .botaoV:hover{
+   background-color: #e2d4d4;
+   color: rgb(0, 0, 0);
+   transition: 0.4s;
+   
+  }
+
+  .back{
+    background: linear-gradient(180deg, rgba(21,23,20,1) 0%, rgba(135,135,135,1) 51%, rgb(248, 248, 255) 100%);
+  }
+
+  .imgCircle{
+    border-radius: 35px;
+  }

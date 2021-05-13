@@ -1,8 +1,181 @@
-<p>linha-tempo works!</p>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 d-flex justify-content-center">
-            <img src="https://i.imgur.com/2MjRTbB.jpg" alt="Foto de perfil">
+<div class="container-fluid">
+
+    <div class="row  d-flex align-items-center back">
+        <div class="col-md-6">
+
+            <div class="row d-flex justify-content-center mt-3">
+                <div class="col-md-12 text-white mt-5">
+                    <h4 class="fontSize15"></h4>
+                    <h5 class="fontSize18 text-dark">Comece publicando uma doação feita, ou dizer que precisa de uma ... 😀</h5>
+                </div>
+            </div>
+
+            
+        </div>
+
+        
+    </div>
+
+    <div class=" container d-flex justify-content-center">
+        <div class="row d-flex justify-content-center mt-3 mb-5">
+            <div class="col-md-12">
+                <button class="btn btn-lg pad-but botao mr-3" data-toggle="modal" data-target="#novaPostagem">Nova
+                    Postagem</button>
+                <a class="btn btn-lg botaoV" href="#postagens">Ver Postagens</a>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="conainer mb-5 mt-5" id="postagens">
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+
+            <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-todasPostagens-tab"
+                data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens"
+                aria-selected="true">Todas as postagens</a>
+
+            <a (click)='findByIdUser()'  class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab"
+                href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
+                Postagens</a>
+
+            <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab"
+                href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por
+                tema</a>
+
+        </div>
+    </nav>
+    <div class="tab-content mt-5" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
+            aria-labelledby="nav-todasPostagens-tab">
+            
+            <div class="conainer d-flex justify-content-center" *ngFor='let item of listaPostagens'>
+                <div class="card mt-5" >
+                    <div class="card-header text-muted">
+                        <img src="{{item.usuarioPublicador.foto}}" alt="foto" width="50px" height="50px" class="img-fluid imgCircle mr-2">publicado por: {{item.usuarioPublicador.nome}} | Tema: {{item.tema.descricao}}  
+                    </div>
+                   
+                    <div class="card-body">
+                        <div class="d-flex align-items-center" >
+                            <h5 class="card-title mr-4">Evento: {{item.evento}} | Comunidade: {{item.comunidade}}</h5>
+                            
+                        </div>
+                        <hr>
+                      <p class="card-text">{{item.publicacao}}</p>
+                      <p class="card-text"><small class="text-muted"></small></p>
+                      <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyy'}} ás {{item.date | date: 'HH:mm'}}</small></p>
+                      
+                    </div>
+                  </div>
+                  
+                
+                
+            </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+            <div class="conainer d-flex justify-content-center" *ngFor='let item of usuario.minhasPostagens'>
+                <div class="card mt-5" >
+                    <div class="card-header text-muted">
+                      Tema: {{item.tema.descricao}}
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center" >
+                            <h5 class="card-title mr-4">Evento: {{item.evento}} | Comunidade: {{item.comunidade}}</h5>
+                            
+                        </div>
+                        <hr>
+                      <p class="card-text">{{item.publicacao}}</p>
+                      <p class="card-text"><small class="text-muted"></small></p>
+                      <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyy'}} ás {{item.date | date: 'HH:mm'}}</small></p>
+                      <a [routerLink]="['/postagem-edit', item.idPostagem]" class="text-info mr-3"href="">Editar</a>
+                      <a [routerLink]="['/postagem-delete', item.idPostagem]" class="text-danger" href="">Apagar</a>
+                    </div>
+                  </div>
+                  
+                
+                
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab" *ngFor='let tema of listaTemas'>
+            <div class="conainer d-flex justify-content-center" *ngFor='let item of tema.postagem'>
+                <div class="card mt-5" >
+                    <div class="card-header text-muted">
+                       | Publicado por {{item.usuarioPublicador.nome}}
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center" >
+                            <h5 class="card-title mr-4">Evento: {{item.evento}} | Comunidade: {{item.comunidade}}</h5>
+                            
+                        </div>
+                        <hr>
+                      <p class="card-text">{{item.publicacao}}</p>
+                      <p class="card-text"><small class="text-muted"></small></p>
+                      <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyy'}} ás {{item.date | date: 'HH:mm'}}</small></p>
+                      
+                    </div>
+                  </div>
+                  
+                
+                
+            </div>
+                  
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="evento">evento</label>
+                    <input [(ngModel)]='postagem.evento'  type="text" class="form-control" id="evento" placeholder="Digite o titulo">
+                </div>
+
+                <div class="form-group">
+                    <label for="comunidade">comunidade</label>
+                    <input [(ngModel)]='postagem.comunidade'   type="text" class="form-control" id="comunidade" placeholder="Digite o titulo">
+                </div>
+
+                <div class="form-group">
+                    <label for="publicacao">publicação</label>
+                    <textarea [(ngModel)]='postagem.publicacao'  class="form-control" name="publicacao" id="publicacao"  rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>Cadastre um novo</a>: </label>
+                    <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                        <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+                    </select>
+                </div>
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
+            </div>
         </div>
     </div>
 </div>
+

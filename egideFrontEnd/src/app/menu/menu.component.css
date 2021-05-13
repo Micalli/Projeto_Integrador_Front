@@ -1,0 +1,30 @@
+.fs-16
+{
+    font-size: 16pt;
+}
+
+a{
+    cursor: pointer;
+}
+
+.shad{
+    box-shadow: 0 1px 4px rgb(2, 2, 2);
+}
+
+.card-body{
+    width: 10px;
+}
+
+.corFundoJ{
+        
+    opacity:10;
+      
+      background: rgba(204, 69, 216, 0.452); /*cor que torna a barra transparente*/
+      overflow: hidden;
+      backdrop-filter: blur(10px); /* elemento que deixa a transparência mais ofuscada*/
+     
+   }
+
+   .imagem{
+       margin-right: 136px;
+   }

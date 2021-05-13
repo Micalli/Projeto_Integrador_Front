@@ -1,0 +1,42 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-12 mt-5">
+            <h1 class="text-center">Atualizar Postagem</h1>
+        </div>
+    </div>
+
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+            
+            <div class="form-group">
+                <label for="evento">evento</label>
+                <input [(ngModel)]='postagem.evento'  type="text" class="form-control" id="evento" placeholder="Digite o titulo">
+            </div>
+
+            <div class="form-group">
+                <label for="comunidade">comunidade</label>
+                <input [(ngModel)]='postagem.comunidade'   type="text" class="form-control" id="comunidade" placeholder="Digite o titulo">
+            </div>
+
+            <div class="form-group">
+                <label for="publicacao">publicação</label>
+                <textarea [(ngModel)]='postagem.publicacao'  class="form-control" name="publicacao" id="publicacao"  rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>Cadastre um novo</a>: </label>
+                <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                    <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-danger mr-4" routerLink='/linha-tempo'>Cancelar</button>
+                <button class="btn btn-success" (click)='atualizar()'>Atualizar</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
