@@ -1,12 +1,12 @@
 <div class="container-fluid">
 
-    <div class="row bg-dark d-flex align-items-center">
+    <div class="row  d-flex align-items-center back">
         <div class="col-md-6">
 
-            <div class="row d-flex justify-content-center mt-5">
+            <div class="row d-flex justify-content-center mt-3">
                 <div class="col-md-12 text-white mt-5">
                     <h4 class="fontSize15"></h4>
-                    <h5 class="fontSize18">Comece publicando uma doação feita, ou dizer que precisa de uma ... 😀</h5>
+                    <h5 class="fontSize18 text-dark">Comece publicando uma doação feita, ou dizer que precisa de uma ... 😀</h5>
                 </div>
             </div>
 
@@ -19,9 +19,9 @@
     <div class=" container d-flex justify-content-center">
         <div class="row d-flex justify-content-center mt-3 mb-5">
             <div class="col-md-12">
-                <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova
+                <button class="btn btn-lg pad-but botao mr-3" data-toggle="modal" data-target="#novaPostagem">Nova
                     Postagem</button>
-                <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
+                <a class="btn btn-lg botaoV" href="#postagens">Ver Postagens</a>
 
             </div>
         </div>
@@ -55,8 +55,9 @@
             <div class="conainer d-flex justify-content-center" *ngFor='let item of listaPostagens'>
                 <div class="card mt-5" >
                     <div class="card-header text-muted">
-                      publicado por: {{item.usuarioPublicador.nome}} | Tema: {{item.tema.descricao}}
+                        <img src="{{item.usuarioPublicador.foto}}" alt="foto" width="50px" height="50px" class="img-fluid imgCircle mr-2">publicado por: {{item.usuarioPublicador.nome}} | Tema: {{item.tema.descricao}}  
                     </div>
+                   
                     <div class="card-body">
                         <div class="d-flex align-items-center" >
                             <h5 class="card-title mr-4">Evento: {{item.evento}} | Comunidade: {{item.comunidade}}</h5>
