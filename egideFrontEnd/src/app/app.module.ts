@@ -16,9 +16,10 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
-import { OrderPipe } from 'ngx-order-pipe';
+//import { OrderPipe } from 'ngx-order-pipe';
 import{ ModalModule } from 'ngx-bootstrap/modal'
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import "@angular/compiler"
 
 
 
@@ -44,7 +45,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    OrderPipe,
+    //OrderPipe,
     ModalModule.forRoot()
   ],
   providers: [{

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/Usuario';
-import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-user-edit',
@@ -21,15 +21,22 @@ export class UserEditComponent implements OnInit {
     private authService: AuthService,
     private route: ActivatedRoute,
     private router: Router,
-    private alertas: AlertasService
+    
   ) { }
 
   ngOnInit(){
     window.scroll(0,0)
 
     if(environment.token == ''){
-      this.alertas.showAlertInfo('Ops, sua seção expirou... Por favor faça o login novamente.')
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/logar'])
+      Swal.fire({
+        icon: 'info',
+        title: 'Ops',
+        text: 'Sua sessão expirou, faça o login novamente ',
+        showConfirmButton: false,
+        timer: 4000
+      })
+      
     }
     this.idUser = this.route.snapshot.params['id']
     this.findByIdUser(this.idUser)
@@ -49,12 +56,25 @@ export class UserEditComponent implements OnInit {
 
       this.user.tipo = this.tipoUsuario
       if(this.user.senha != this.confirmarSenha){
-        this.alertas.showAlertDanger('As senhas não são iguais...')
+        Swal.fire({
+          icon: 'error',
+          title: 'Ops',
+          text: 'As senhas não são iguais...',
+          showConfirmButton: false,
+          timer: 2500
+        })
       }else{
         this.authService.cadastrar(this.user).subscribe((resp: Usuario)=> {
           this.user = resp
           this.router.navigate(['/inicio']) //redireciona a pagina 
-          this.alertas.showAlertSuccess('Usuárie Atualizade com sucesso, por favor faça o login novamente.')})
+          Swal.fire({
+            icon: 'info',
+            title: '😄',
+            text: 'Usuário Atualizado com sucesso, por favor faça o login novamente.',
+            showConfirmButton: false,
+            timer: 2500
+          })
+        })
           environment.token = ''
           environment.nome = ''
           environment.foto = ''
