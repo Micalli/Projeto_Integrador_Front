@@ -55,25 +55,31 @@
             <div class="conainer d-flex justify-content-center" *ngFor='let item of listaPostagens'>
                 <div class="card mt-5" >
                     <div class="card-header text-muted">
-                        <img src="{{item.usuarioPublicador.foto}}" alt="foto" width="50px" height="50px" class="img-fluid imgCircle mr-2">publicado por: {{item.usuarioPublicador.nome}} | Tema: {{item.tema.descricao}}  
+                        <img src="{{item.usuarioPublicador.foto}}" alt="foto" width="50px" height="50px" class=" imgCircle mr-2"> {{item.usuarioPublicador.tipo}} | publicado por: {{item.usuarioPublicador.nome}}  | Tema: {{item.tema.descricao}}  
                     </div>
                    
                     <div class="card-body">
-                        <div class="d-flex align-items-center" >
+                        <div class="d-flex align-items-center " >
                             <h5 class="card-title mr-4">Evento: {{item.evento}} | Comunidade: {{item.comunidade}}</h5>
                             
                         </div>
                         <hr>
                       <p class="card-text">{{item.publicacao}}</p>
-                      <p class="card-text"><small class="text-muted"></small></p>
-                      <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyy'}} ás {{item.date | date: 'HH:mm'}}</small></p>
+                      <div class="d-flex justify-content-center">
+                        <img class="imgPub" src="{{item.foto}}" alt="">
+                      </div>
+                      <div>
+                        <a href="{{item.link}}" target="_blank"><button  type="button" class="btn btn-primary mt-3 mb-2">Doar 💜</button></a>
+                        
+                      </div>
+                      <p class="card-text"><small class="text-muted">Em {{item.date | date: 'dd/MM/yyy'}} ás {{item.date | date: 'HH:mm'}}</small></p>
                       
                     </div>
                   </div>
                   
                 
                 
-            </div>
+            </div>                                                                                                                                                                                   
 
 
         </div>
@@ -91,6 +97,10 @@
                         </div>
                         <hr>
                       <p class="card-text">{{item.publicacao}}</p>
+                      <div class="d-flex justify-content-center">
+                        <img class="imgPub" src="{{item.foto}}" alt="">
+                      </div>
+
                       <p class="card-text"><small class="text-muted"></small></p>
                       <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyy'}} ás {{item.date | date: 'HH:mm'}}</small></p>
                       <a [routerLink]="['/postagem-edit', item.idPostagem]" class="text-info mr-3"href="">Editar</a>
@@ -154,6 +164,16 @@
                 <div class="form-group">
                     <label for="comunidade">comunidade</label>
                     <input [(ngModel)]='postagem.comunidade'   type="text" class="form-control" id="comunidade" placeholder="Digite o titulo">
+                </div>
+
+                <div class="form-group">
+                    <label for="foto">Link foto</label>
+                    <input [(ngModel)]='postagem.foto'   type="text" class="form-control" id="foto" placeholder="Digite o link da foto">
+                </div>
+
+                <div class="form-group">
+                    <label for="link">Link para receber doções</label>
+                    <input [(ngModel)]='postagem.link'   type="text" class="form-control" id="link" placeholder="Ex: link PayPal..PIX..etc">
                 </div>
 
                 <div class="form-group">

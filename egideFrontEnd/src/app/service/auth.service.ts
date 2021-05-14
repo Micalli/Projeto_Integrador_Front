@@ -42,4 +42,14 @@ export class AuthService {
 
   }
 
+  inst(){
+    let ok: boolean = false;
+
+    if(environment.tipo == '☑️'){
+      ok = true
+    }
+
+    return ok
+  }
+
 } 
