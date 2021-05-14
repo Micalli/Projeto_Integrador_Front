@@ -17,6 +17,9 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { OrderPipe } from 'ngx-order-pipe';
+import{ ModalModule } from 'ngx-bootstrap/modal'
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
+
 
 
 @NgModule({
@@ -32,14 +35,17 @@ import { OrderPipe } from 'ngx-order-pipe';
     MenuComponent,
     RodapeComponent,
     PostagemEditComponent,
-    PostagemDeleteComponent
+    PostagemDeleteComponent,
+    UserEditComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    OrderPipe
+    OrderPipe,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy, 
