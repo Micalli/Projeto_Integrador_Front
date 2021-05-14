@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { UserLogin } from '../model/UserLogin';
 import { AuthService } from '../service/auth.service';
 
@@ -12,6 +13,7 @@ import { AuthService } from '../service/auth.service';
 export class LogarComponent implements OnInit {
   
 userLogin:UserLogin= new UserLogin
+
 
 
   constructor(
@@ -39,11 +41,30 @@ console.log(environment.nome)
 console.log(environment.id)
 console.log(environment.foto)
 this.router.navigate(['/linha-tempo'])
-}, erro => {
+},erro =>{
   if(erro.status == 500){
-    alert('Senha ou usuario incorretos')
+    Swal.fire({
+      icon: 'error',
+      title: 'Ocorreu um erro',
+      text: 'Usuario e/ou senha incorreto(s)!',
+      showConfirmButton: false,
+      timer: 2000
+    })
   }
 })
 
+
 }
+
+esqueceuSenha(){
+  Swal.fire({
+    icon: 'info',
+    title: 'Recurso em desenvolvimento',
+    text: 'Implementação em breve',
+    showConfirmButton: false,
+    timer: 2200
+  })
 }
+
+}
+

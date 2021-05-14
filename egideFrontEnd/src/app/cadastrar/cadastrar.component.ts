@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
@@ -34,15 +35,33 @@ export class CadastrarComponent implements OnInit {
  cadastrar(){
    this.usuario.tipo=this.tipoUsuario
    if(this.usuario.senha!=this.confirmarSenha){
-  alert('Senhas Invalidas')
+    Swal.fire({
+      icon: 'error',
+      title: 'Ocorreu um erro',
+      text: 'As senhas não conferem',
+      showConfirmButton: false,
+      timer: 2000
+    })
    }
 else{
    this.authService.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
      this.usuario=resp
+     if(this.usuario.foto == '' || this.usuario.foto == null) {
+      this.usuario.foto = 'https://i.imgur.com/2fNwmra.png'
+    }
      this.router.navigate(['/logar'])
-     alert ('usuario cadastrado com sucesso.')
+   
    })
+   Swal.fire({
+    icon: 'success',
+    title: 'Obrigado 😀',
+    text: 'Usuário cadastrado com sucesso',
+    showConfirmButton: false,
+    timer: 2500
+  })
+  
 
   }
  }
+ 
 }

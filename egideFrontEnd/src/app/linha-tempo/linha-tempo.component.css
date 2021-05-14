@@ -12,7 +12,7 @@
   .botao:hover{
    background-color: #ad7b64;
    color: white;
-   transition: 0.3s;
+   transition: 0.4s;
    
   }
 
@@ -24,8 +24,8 @@
   }
 
   .botaoV:hover{
-   background-color: #e2d4d4;
-   color: rgb(0, 0, 0);
+   background-color: #ad7b64;
+   color:  white;
    transition: 0.4s;
    
   }

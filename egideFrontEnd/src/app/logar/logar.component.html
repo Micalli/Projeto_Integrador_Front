@@ -20,7 +20,9 @@
           <label for="senha">Senha</label>
           <input [(ngModel)]='userLogin.senha' class="form-control d-flex" type="password" name="senha" id="senha"
             placeholder="Digite sua senha">
-          <a class="m-0" href="#">Esqueceu sua senha?</a>
+          <button>
+            <a class="m-0" (click)='esqueceuSenha()'>Esqueceu sua senha?</a>
+          </button>
 
 
           <div class="d-flex justify-content-center m-3 pad-but">

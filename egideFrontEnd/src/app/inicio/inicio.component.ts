@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
+import { FormGroup } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-inicio',
@@ -7,42 +8,23 @@ import { interval } from 'rxjs';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+  formgroup: FormGroup
 
   constructor() { }
 
   ngOnInit() {
     window.scroll(0,0)
-    //this.scroll()
-    setInterval(()=> {
-      //this.scroll()
-    },100)
-   
-   
+    
   }
 
   onActivate(event:any) {
     let scrollToTop = window.setInterval(() => {
         let pos = window.pageYOffset;
         if (pos > 0) {
-            window.scrollTo(0, pos - 20); // how far to scroll on each step
+            window.scrollTo(0, pos - 9000000); // how far to scroll on each step
         } else {
             window.clearInterval(scrollToTop);
         }
-    }, 3);
+    },16);
 }
- /*scroll(){
-  
-  let x = <HTMLElement>document.body.querySelector(".active")
-  window.addEventListener ("scroll", ()=>{
-    if(window.pageYOffset > 10){
-      x.classList.add("active")
-    }else{
-      x.classList.remove("active")
-    }
-  })
-
-}*/
-
-
-
 }
