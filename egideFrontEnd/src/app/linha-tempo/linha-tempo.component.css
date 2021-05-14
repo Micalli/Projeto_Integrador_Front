@@ -35,5 +35,27 @@
   }
 
   .imgCircle{
-    border-radius: 35px;
+    border-radius: 60px;
+  }
+
+  .imgPub{
+    
+    max-width: 100%;
+   
+  }
+
+  .btn-primary{
+    
+    border: 1px solid rgb(104, 31, 93);
+    white-space: nowrap;
+    border-radius: 8px;
+    
+  }
+
+  .btn-primary:hover{
+   background-color: #4a75d3;
+  
+   color: rgb(255, 255, 255);
+   transition: 0.4s;
+   
   }
