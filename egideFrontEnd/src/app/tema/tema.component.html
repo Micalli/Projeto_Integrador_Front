@@ -4,22 +4,22 @@
 
         <div class="col-md-12 mt-5">
 
-            <a routerLink='/inicio' class="text-white text-left">
+            <a routerLink='/linha-tempo' class="text-white text-left">
             
             <i><img src="" alt="Seta para esquerda">Início</i>
             </a>
 
-            <h1 class="fs text-center">Temas</h1>
+            <h1 class="fs text-center topT">Temas</h1>
             <h5 class="fs-18 text-center">Veja aqui todos os temas criados ou crie um novo: </h5>
 
             <div class="row d-flex justify-content-center mt-4 mb-5">
-                <div class="col-md-3">
+                <div class="col-md-3 d-flex justify-content-center">
                     <div class="form-group">
-                        <input [(ngModel)]='tema.descricao' type="text" class="form-group justify-content-center" id="descricao"
+                        <input [(ngModel)]='tema.descricao' type="text" class="form-group" id="descricao"
                          placeholder="Digite a descrição do tema ">
                     </div>
 
-                        <div class="d-flex justify-content-center">
+                        <div class=" ml-3">
 
                             <button class="btn btn-light font-italic" (click)='cadastrar()'>Criar</button>
 
@@ -37,7 +37,7 @@
 
     <div class="row mt-5">
 
-        <div class="col-md-12">
+        <div class="col-md-12 d-flex justify-content-center">
 
             <h2 class="texte-center">Todos os temas: </h2>
 
