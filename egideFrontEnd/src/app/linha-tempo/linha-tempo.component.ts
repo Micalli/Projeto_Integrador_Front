@@ -16,6 +16,9 @@ import { TemaService } from '../service/tema.service';
 })
 export class LinhaTempoComponent implements OnInit {
 
+  key = 'date'
+  reverse = true
+
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
