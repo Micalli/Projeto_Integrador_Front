@@ -16,7 +16,15 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+
+
+
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import "@angular/compiler"
+
+
 import { OrderModule } from 'ngx-order-pipe';
+
 
 
 @NgModule({
@@ -32,14 +40,19 @@ import { OrderModule } from 'ngx-order-pipe';
     MenuComponent,
     RodapeComponent,
     PostagemEditComponent,
-    PostagemDeleteComponent
+    PostagemDeleteComponent,
+    UserEditComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+
+
     OrderModule
+
   ],
   providers: [{
     provide: LocationStrategy, 
