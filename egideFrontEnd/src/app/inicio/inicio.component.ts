@@ -17,8 +17,8 @@ export class InicioComponent implements OnInit {
 
   }
 
-  onActivate(event: any) {
+  onActivate(event:any) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-  }
+}
 }
